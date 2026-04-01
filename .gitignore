@@ -10,7 +10,7 @@ next.user-config.*
 # Environment variables
 .env*.local
 
-# Common ignores
+# Common ignoresgit add .
 node_modules
 .next/
 .DS_Store

@@ -17,7 +17,6 @@ export const translations = {
       catalogBtn: "Смотреть каталог",
       learnMoreBtn: "Узнать больше",
     },
-
    about: {
   label: "О компании",
   title: "Ваш надежный партнер в сфере ЖД комплектующих",
@@ -26,7 +25,6 @@ export const translations = {
     "В наш опыт входит успешное выполнение работ по деповскому ремонту грузовых вагонов собственности АО «KTZ Express».",
     "Также обеспечиваем бесперебойную поставку запасных частей для ЖД вагонов в 2025 году на текущий отцепочный ремонт (ТОР) вагонов собственности АО «НК КТЖ»."
   ],
-
   feature1: "Сертифицированная продукция (РУ-1Ш, СОНК)",
   feature2: "Собственная логистика и склады в регионах",
   feature3: "Прямые контракты с заводами-изготовителями",
@@ -109,8 +107,11 @@ export const translations = {
     about: {
       label: "About Us",
       title: "Your reliable partner in railway components",
-      description:
+      description: [
         "We ensure uninterrupted operation of the rolling stock by supplying certified castings and running gear parts. Each product undergoes strict quality control.",
+        "Our experience includes successful completion of depot repairs for freight cars owned by KTZ Express JSC.",
+        "We also provide uninterrupted supply of spare parts for railway cars in 2025 for current uncoupling repairs (TOR) of cars owned by NC KTZ JSC."
+      ],
       feature1: "Certified products (RU-1Sh, SONK)",
       feature2: "Own logistics and regional warehouses",
       feature3: "Direct contracts with manufacturers",

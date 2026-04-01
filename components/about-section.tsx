@@ -85,8 +85,6 @@ export function AboutSection() {
             </div>
           </motion.div>
 
-
-
           {/* RIGHT SIDE */}
           <motion.div
             {...fadeInUp}
