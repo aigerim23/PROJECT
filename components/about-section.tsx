@@ -20,7 +20,7 @@ export function AboutSection() {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-20 md:mb-32">
           {[
-            { value: "10+", label: t.about.stats.years, bg: "bg-blue-200" }, // Едва заметный синий
+            { value: "5+", label: t.about.stats.years, bg: "bg-blue-200" }, // Едва заметный синий
             { value: "450+", label: t.about.stats.clients, bg: "bg-blue-200" }, // Холодный серый
             { value: "15k+", label: t.about.stats.parts, bg: "bg-blue-200" }, 
             { value: "24/7", label: t.about.stats.support, bg: "bg-blue-200" },
