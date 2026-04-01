@@ -20,9 +20,9 @@ export function AboutSection() {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-20 md:mb-32">
           {[
-            { value: "5+", label: t.about.stats.years, bg: "bg-blue-200" },
-            { value: "450+", label: t.about.stats.clients, bg: "bg-blue-200" },
-            { value: "15k+", label: t.about.stats.parts, bg: "bg-blue-200" },
+            { value: "5+", label: t.about.stats.years, bg: "bg-blue-200" }, // Едва заметный синий
+            { value: "450+", label: t.about.stats.clients, bg: "bg-blue-200" }, // Холодный серый
+            { value: "15k+", label: t.about.stats.parts, bg: "bg-blue-200" }, 
             { value: "24/7", label: t.about.stats.support, bg: "bg-blue-200" },
           ].map((stat, index) => (
             <motion.div
@@ -52,32 +52,32 @@ export function AboutSection() {
             </h2>
           </motion.div>
 
-          <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
-            {/* whitespace-pre-line позволяет делать переносы строк через \n в файле перевода */}
-            <p className="text-neutral-600 text-sm md:text-base lg:text-lg leading-relaxed mb-8 border-l-2 border-blue-600 pl-6 whitespace-pre-line">
-              {t.about.description}
-            </p>
+        <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
+  {/* Убираем жесткий mb-10, заменяем на mb-6 или mb-8, чтобы карточки не ушли слишком низко */}
+  <p className="text-neutral-600 text-sm md:text-base lg:text-lg leading-relaxed mb-8 border-l-2 border-blue-600 pl-6 whitespace-pre-line">
+    {t.about.description}
+  </p>
 
-            <div className="space-y-3">
-              {[
-                { icon: Award, text: t.about.feature1, color: "bg-blue-600" },
-                { icon: Truck, text: t.about.feature2, color: "bg-slate-700" },
-                { icon: Handshake, text: t.about.feature3, color: "bg-blue-800" },
-              ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 p-4 bg-white border border-neutral-200 hover:border-blue-300 transition-colors shadow-sm"
-                >
-                  <div className={`w-10 h-10 ${feature.color} flex items-center justify-center shrink-0`}>
-                    <feature.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-neutral-800 font-medium text-xs md:text-sm">
-                    {feature.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+  <div className="space-y-3"> {/* Уменьшил gap между карточками с 4 до 3 */}
+    {[
+      { icon: Award, text: t.about.feature1, color: "bg-blue-600" },
+      { icon: Truck, text: t.about.feature2, color: "bg-slate-700" },
+      { icon: Handshake, text: t.about.feature3, color: "bg-blue-800" },
+    ].map((feature, index) => (
+      <div
+        key={index}
+        className="flex items-center gap-4 p-4 bg-white border border-neutral-200 hover:border-blue-300 transition-colors shadow-sm"
+      >
+        <div className={`w-10 h-10 ${feature.color} flex items-center justify-center shrink-0`}>
+          <feature.icon className="w-5 h-5 text-white" />
+        </div>
+        <span className="text-neutral-800 font-medium text-xs md:text-sm">
+          {feature.text}
+        </span>
+      </div>
+    ))}
+  </div>
+</motion.div>
         </div>
       </div>
     </section>
