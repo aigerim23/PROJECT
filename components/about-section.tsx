@@ -54,9 +54,10 @@ export function AboutSection() {
 
         <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
   {/* Убираем жесткий mb-10, заменяем на mb-6 или mb-8, чтобы карточки не ушли слишком низко */}
-  <p className="text-neutral-600 text-sm md:text-base lg:text-lg leading-relaxed mb-8 border-l-2 border-blue-600 pl-6 whitespace-pre-line">
-    {t.about.description}
-  </p>
+<div className="text-neutral-600 text-sm md:text-base leading-relaxed mb-8 border-l-2 border-blue-600 pl-6 whitespace-pre-line">
+  {t.about.description}
+</div>
+
 
   <div className="space-y-3"> {/* Уменьшил gap между карточками с 4 до 3 */}
     {[
