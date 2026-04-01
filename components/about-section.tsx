@@ -52,32 +52,32 @@ export function AboutSection() {
             </h2>
           </motion.div>
 
-          <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
-            <p className="text-neutral-600 text-base md:text-lg leading-relaxed mb-10 border-l-2 border-blue-600 pl-6">
-              {t.about.description}
-            </p>
+        <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
+  {/* Убираем жесткий mb-10, заменяем на mb-6 или mb-8, чтобы карточки не ушли слишком низко */}
+  <p className="text-neutral-600 text-sm md:text-base lg:text-lg leading-relaxed mb-8 border-l-2 border-blue-600 pl-6 whitespace-pre-line">
+    {t.about.description}
+  </p>
 
-            <div className="space-y-4">
-              {[
-                { icon: Award, text: t.about.feature1, color: "bg-blue-600" },
-                { icon: Truck, text: t.about.feature2, color: "bg-slate-700" },
-                { icon: Handshake, text: t.about.feature3, color: "bg-blue-800" },
-              ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 p-5 bg-white border border-neutral-200 hover:border-blue-300 transition-colors shadow-sm"
-                >
-                  {/* Иконки теперь в разных строгих цветах */}
-                  <div className={`w-12 h-12 ${feature.color} flex items-center justify-center shrink-0`}>
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-neutral-800 font-medium text-sm md:text-base">
-                    {feature.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+  <div className="space-y-3"> {/* Уменьшил gap между карточками с 4 до 3 */}
+    {[
+      { icon: Award, text: t.about.feature1, color: "bg-blue-600" },
+      { icon: Truck, text: t.about.feature2, color: "bg-slate-700" },
+      { icon: Handshake, text: t.about.feature3, color: "bg-blue-800" },
+    ].map((feature, index) => (
+      <div
+        key={index}
+        className="flex items-center gap-4 p-4 bg-white border border-neutral-200 hover:border-blue-300 transition-colors shadow-sm"
+      >
+        <div className={`w-10 h-10 ${feature.color} flex items-center justify-center shrink-0`}>
+          <feature.icon className="w-5 h-5 text-white" />
+        </div>
+        <span className="text-neutral-800 font-medium text-xs md:text-sm">
+          {feature.text}
+        </span>
+      </div>
+    ))}
+  </div>
+</motion.div>
         </div>
       </div>
     </section>
